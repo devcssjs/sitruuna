@@ -1,0 +1,157 @@
+# ---------------------------------------------------------------
+#  Sitruuna settings. Copy this file to config.yaml, edit the copy,
+#  then restart the assistant. (This example is set up for a
+#  BITS Pilani Goa student; change the courses for your college.)
+# ---------------------------------------------------------------
+
+# What Sitruuna calls you (e.g. in the 8 am "Good morning" message)
+your_name: friend
+
+timezone: Asia/Kolkata
+
+# Your lab batch (e.g. EM lab compre is held batch by batch). Lab mails for
+# another batch ("Batch B1", "B3 18.11.26") are skipped. Leave empty if none.
+my_lab_batch: ""
+
+# Your courses: SHORT FORM -> official code + name.
+# The bot shows the short form everywhere (Telegram, timetable, Google Calendar).
+# Big schedules (like the midsem PDF) list every course; only rows matching these
+# codes are added. Any spelling matches: "EEE F215", "ECE/EEE F215",
+# "1166_ECE_INSTR_EEE_ECOM F215" all = DD.
+courses:
+  DD:   {code: "1166_ECE_INSTR_EEE_ECOM F215", name: Digital Design}
+  EM:   {code: "1166_INSTR_EEE_ECE F211", name: Electrical Machines}
+  EMT:  {code: "1166_ECE_EEE_INSTR F212", name: Electromagnetic Theory I}
+  ED:   {code: "1166_INSTR_EEE_ECOM_ECE_F214 SNS F242", name: Electronic Devices}
+  M3:   {code: "MATH F211", name: Mathematics III}
+  EDCC: {code: "GS F212", name: Environmental Development and Climate Change}
+
+# Last day of classes (weekly classes stop on Google Calendar after this).
+# Compre dates come from your emails.
+semester_end: 2026-11-27
+
+gmail:
+  # How far back to read the very first time
+  backfill_days: 60
+  # How often to check for new mail (minutes)
+  check_every_minutes: 30
+  # Only read mail from these senders (full address or just the domain).
+  # Empty list = read everything. This saves your free AI limit.
+  allowed_senders:
+    - bits-pilani.ac.in        # all BITS mail incl. Quanta (quanta.bits-pilani.ac.in)
+  # Always skip these, even if allowed above
+  skip_senders: []
+  # Extra Gmail search filter, e.g. "-category:promotions"
+  extra_query: "-category:promotions -category:social"
+
+ai:
+  # Model names. Check https://ai.google.dev/gemini-api/docs/models if Gemini errors.
+  gemini_model: gemini-3.5-flash-lite
+  claude_model: claude-haiku-5-5
+  # Wait this many seconds between AI calls (keeps you under free-tier limits)
+  seconds_between_calls: 6
+  # Longest email/attachment text sent to the AI (characters)
+  max_chars: 60000
+
+google_calendar:
+  enabled: true
+  # "primary" = your main Google calendar.
+  # Tip: create a calendar called "Sitruuna" in Google Calendar (web) and paste
+  # its Calendar ID here so assistant events are easy to colour, hide or delete.
+  calendar_id: primary
+  # Default length when an email gives a start time but no end time (minutes)
+  default_duration_minutes: 60
+  # Phone alerts Google adds to each event (minutes before)
+  alerts_minutes: [1440, 60, 15]
+
+reminders:
+  digest_time: "08:00"          # morning summary
+  prep_time: "19:00"            # "tomorrow you have..." reminder
+  before_event_minutes: [60, 15]   # Telegram heads-ups before exams / ⭐ classes (minutes)
+  week_ahead_days: 7
+
+# ---------------------------------------------------------------
+#  Study planner (/plan, /replan, /rate, /progress)
+# ---------------------------------------------------------------
+planner:
+  enabled: true
+  # Two flexible study windows a day. Study blocks only go inside these.
+  windows:
+    weekday: ["18:00-20:00", "21:00-23:30"]
+    weekend: ["10:00-13:00", "17:00-19:00"]
+  max_study_minutes:            # daily study limit
+    weekday: 180
+    weekend: 240
+    crunch: 300                 # from crunch_from (compre season)
+  crunch_from: 2026-11-28
+  block_minutes: 50             # one study block
+  break_minutes: 10             # break after each block
+  day_start: "07:00"
+  day_end: "23:59"              # nothing planned after midnight
+  weekend_day_end: "19:00"      # weekend evenings stay free
+  # Meal times: kept free and shown in your plan, but not put on Google Calendar
+  meals:
+    weekday: {breakfast: "07:30-08:30", lunch: "13:00-14:00", dinner: "20:00-21:00"}
+    weekend: {breakfast: "09:00-10:00", lunch: "13:00-14:00", dinner: "20:00-21:00"}
+  # Classes without ⭐ (no attendance) are skipped -> counted as free time
+  skip_non_attendance_classes: true
+  plan_time: "08:00"            # morning plan + "How did you sleep?"
+  replan_time: "22:00"          # tomorrow's plan is made and sent
+  status_check_time: "19:30"    # Sundays: "how far are you?" check-in (/status any time)
+  calendar_blocks: true         # put blocks on Google Calendar
+  block_alert_minutes: 10
+  # Last lecture taught so far, per course (update now and then; later topics
+  # are assumed to be taught evenly until semester_end)
+  # Order of courses in /rate and /status (leave out to use every course in topics.csv)
+  course_order: [M3, DD, EM, EMT, ED]
+  taught_upto: {DD: 33, EM: 31, ED: 20, EMT: 36, M3: 30}
+  last_lecture: {DD: 40, EM: 41, ED: 41, EMT: 42, M3: 42}
+  # On first start, topics marked midsem=yes in topics.csv are counted as learned,
+  # except these topic ids (set assume_midsem_done: false to skip this)
+  assume_midsem_done: true
+  not_done_yet: [EM08, EM09, EM10]
+
+# ---------------------------------------------------------------
+#  Personal routines (fitted around classes and study)
+# ---------------------------------------------------------------
+personal:
+  workout:
+    enabled: true
+    minutes: 60
+    days: [MO, TU, WE, TH, FR, SA]      # Sunday off
+    prefer: ["16:00-18:00", "07:00-09:00", "12:00-16:00"]
+  reading:
+    enabled: true
+    minutes: 45
+    min_minutes: 40
+    prefer: ["22:00-23:59", "14:00-18:00"]          # weekdays: evenings first
+    prefer_weekend: ["14:00-17:00", "10:00-13:00"]
+  dsa:
+    enabled: true
+    questions: 3
+    minutes: 60
+    crunch_questions: 1
+    crunch_minutes: 25
+    prefer: ["08:00-17:00", "22:00-23:59"]
+  project:
+    enabled: true
+    name: "Personal project / skills"
+    weekly_minutes: 180
+    max_per_day: 60
+    crunch_weekly_minutes: 0
+    prefer: ["08:00-17:00"]             # mostly in skipped-class gaps
+  skill:
+    enabled: false
+    name: ""                            # e.g. "Guitar" - set when you pick one
+
+# ---------------------------------------------------------------
+#  Notion (python main.py --setup-notion builds the workspace)
+#  Needs NOTION_TOKEN and NOTION_HQ_PAGE in .env
+# ---------------------------------------------------------------
+notion:
+  enabled: true
+  sync_every_minutes: 2        # Sitruuna -> Notion (only changed items are sent)
+  hq_layout: stacked           # stacked = sections one under another (free plan); dashboard = side by side (paid Notion plan)
+  materials_root: ""           # optional: folder with your course files, shown on each course page
+  sessions_days_back: 7        # study sessions kept in Notion (days before today)
+  sessions_days_ahead: 7

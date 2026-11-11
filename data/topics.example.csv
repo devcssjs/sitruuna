@@ -1,0 +1,69 @@
+course,id,topic,lec_from,lec_to,refs,practice,midsem,parts
+DD,DD01,Boolean algebra & logic gates,1,3,"Mano 1.1, 1.9, 2.2-2.8",Past papers (DD PYQs 2022-25),yes,Boolean laws|Canonical forms (SOP/POS)|Logic gates|Universal gates
+DD,DD02,Number systems & codes,4,5,Mano 1.2-1.7,Past papers (DD PYQs),yes,"Base conversion|Complements|Signed numbers|Codes (BCD, Gray, ASCII)"
+DD,DD03,K-maps & Quine-McCluskey simplification,6,8,Mano Ch 3,Past papers + compre question bank,yes,K-maps (2-4 variables)|Don't-care conditions|5-variable K-map|Quine-McCluskey
+DD,DD04,Arithmetic circuits (adders subtractors multipliers),9,11,Mano 4.1-4.7,Past papers + compre question bank,yes,Adders|Subtractors|Carry look-ahead|Multipliers|BCD adder
+DD,DD05,MSI components (comparators decoders encoders MUX DEMUX),12,14,Mano 4.8-4.11,Past papers + compre question bank,yes,Comparators|Decoders|Encoders|MUX|DEMUX
+DD,DD06,Verilog for combinational logic,15,16,"Mano 3.11, 4.12",DD 2025 Verilog session paper,yes,Gate-level modelling|Dataflow modelling|Behavioural modelling|Testbenches
+DD,DD07,Digital ICs (TTL and MOS logic),17,17,"Mano 10.3-10.9, class notes",Past papers,yes,TTL|CMOS|Fan-out and noise margin
+DD,DD08,Flip-flops & latches,18,20,Mano 5.1-5.4,Past papers + compre question bank,yes,SR latch|D latch|D flip-flop|JK flip-flop|T flip-flop
+DD,DD09,Clocked sequential circuits (analysis state diagrams reduction),21,24,"Mano 5.5, 5.7-5.8",Past papers + compre question bank,yes,Analysis|State diagrams|State reduction|State assignment|Design
+DD,DD10,Registers & counters,25,26,Mano 6.1-6.5,Past papers + compre question bank,no,Registers|Shift registers|Ripple counters|Synchronous counters
+DD,DD11,Asynchronous sequential circuits,27,31,Mano 9.1-9.7,Past papers + compre question bank,no,Analysis|Latches|Design|Races and hazards
+DD,DD12,Verilog for sequential logic (registers counters),32,33,"Mano 5.6, 6.6",DD 2025 Verilog session paper,no,Flip-flops in Verilog|Registers|Counters|FSMs
+DD,DD13,Memory & PLDs (RAM ROM PLA PAL),34,36,Mano 7.1-7.8,Past papers + compre question bank,no,RAM|ROM|PLA|PAL
+DD,DD14,RTL & ASM charts (modular CPU design),37,38,"Mano 8.1-8.2, 8.4-8.7",Past papers,no,RTL notation|ASM charts|Datapath and control
+DD,DD15,Memory organization & hierarchy,39,40,Class notes,Past papers,no,
+EM,EM01,Intro to machines & magnetic circuits,1,3,K&N Ch 1,"Tutorial 1, Tutorial 2",yes,Magnetic circuits|Hysteresis and eddy losses|Energy conversion basics
+EM,EM02,Transformer basics (no load ideal real),4,4,K&N 3.3-3.5,Tutorial 3,yes,
+EM,EM03,Transformer equivalent circuit phasors ratings,5,7,K&N 3.5,Tutorial 3,yes,Equivalent circuit|Phasor diagrams|Ratings
+EM,EM04,Transformer losses & tests (OC SC Sumpner),8,9,K&N 3.6-3.7,Tutorial 4,yes,Losses|OC test|SC test|Sumpner test
+EM,EM05,Per-unit system efficiency regulation,10,10,K&N 3.8-3.9,"Tutorial 4, Tutorial 5",yes,Per-unit system|Efficiency|Regulation
+EM,EM06,Autotransformer & 3-phase transformers,11,11,"K&N 3.11, 3.13",Tutorial 5,yes,Autotransformer|3-phase transformers
+EM,EM07,Parallel operation & CT/PT,12,12,"K&N 3.14, 3.18",Tutorial 5,yes,Parallel operation|CT|PT
+EM,EM08,DC machines (EMF torque circuit model),13,14,K&N 7.2-7.5,Tutorial 6,yes,EMF equation|Torque equation|Circuit model
+EM,EM09,DC generator characteristics & excitation,15,17,K&N 7.9-7.14,Tutorial 6,yes,Generator characteristics|Excitation types|Voltage build-up
+EM,EM10,DC motors (characteristics speed control braking testing),18,20,K&N 7.15-7.20,Tutorial 6,yes,Motor characteristics|Speed control|Braking|Testing
+EM,EM11,AC armature windings,21,22,K&N Ch 6,Past papers (EM PYQs 2022-25),no,Winding types|Pitch and distribution factors
+EM,EM12,Rotating machine basics (EMF MMF rotating field torque),23,27,K&N 5.2-5.9,Past papers (EM PYQs),no,Induced EMF|MMF of windings|Rotating field|Torque
+EM,EM13,Synchronous machine model reactance armature reaction,28,30,K&N 8.1-8.8,Past papers (EM PYQs),no,Circuit model|Synchronous reactance|Armature reaction
+EM,EM14,Synchronous machine operation efficiency power flow,31,34,K&N 8.9-8.12,Past papers (EM PYQs),no,Infinite bus operation|Power flow|Efficiency
+EM,EM15,Induction machines (construction principle),35,36,K&N 9.1-9.3,Past papers (EM PYQs),no,Construction|Principle|Slip
+EM,EM16,Induction motor equivalent circuit power & tests,37,39,K&N 9.4-9.6,Past papers (EM PYQs),no,Equivalent circuit|Power and torque|No-load and blocked-rotor tests
+EM,EM17,Induction motor starting & speed control,40,41,"K&N 9.8, 9.10",Past papers (EM PYQs),no,Starting methods|Speed control
+ED,ED01,Crystal structure Miller indices crystal growth,1,2,Streetman 1.1-1.4,Tutorial 1,yes,Crystal structure|Miller indices|Crystal growth
+ED,ED02,Elementary quantum mechanics (reading),2,2,"Streetman 2.2, 2.4",Past papers (ED PYQs),yes,
+ED,ED03,Energy bands density of states Fermi-Dirac,3,6,Streetman 3.1-3.2,Tutorial 2,yes,Energy bands|Density of states|Fermi-Dirac
+ED,ED04,Charge carriers drift mobility Hall effect,7,9,Streetman 3.3-3.5,"Tutorial 2, Tutorial 3, Carrier transport assignments 1-2",yes,Drift|Mobility|Hall effect
+ED,ED05,Excess carriers (lifetime diffusion continuity Haynes-Shockley),10,12,Streetman 4.1-4.4,Tutorial 5 (excess carriers),yes,Lifetime|Diffusion|Continuity equation|Haynes-Shockley
+ED,ED06,PN junction (equilibrium and I-V),13,16,Streetman 5.2-5.4,PN junction questions & solutions sheet,no,Equilibrium|Depletion region|I-V characteristics
+ED,ED07,Breakdown switching Schottky & ohmic contacts,17,20,Streetman 5.4-5.7,Past papers (ED PYQs),no,Breakdown|Switching|Schottky contacts|Ohmic contacts
+ED,ED08,MOS capacitor,21,24,Streetman 6.1-6.4,Past papers (ED PYQs),no,Ideal MOS capacitor|C-V curves|Threshold voltage
+ED,ED09,MOSFETs & advanced structures,25,32,Streetman 6.4-6.6,Past papers (ED PYQs),no,MOSFET I-V|Short-channel effects|Advanced structures
+ED,ED10,Bipolar junction transistors,33,37,Streetman 7.1-7.7,Past papers (ED PYQs),no,BJT operation|Current gain|Ebers-Moll model|Frequency limits
+ED,ED11,Optoelectronic devices,38,39,Streetman 8.1-8.4,Past papers (ED PYQs),no,Photodiodes|Solar cells|LEDs|Lasers
+ED,ED12,Transistor circuits (load line Q-point small signal),40,41,Lecture notes,Past papers (ED PYQs),no,Load line|Q-point|Small-signal model
+EMT,EMT01,Vector algebra & coordinate systems,1,3,Hayt Ch 1,Tutorial 1,yes,Vector algebra|Cartesian|Cylindrical|Spherical
+EMT,EMT02,Coulomb's law & electric field intensity,4,6,Hayt Ch 2,Tutorial 2,yes,Coulomb's law|Point charges|Line and sheet charges
+EMT,EMT03,Gauss's law & divergence,7,9,Hayt Ch 3,Tutorial 3,yes,Gauss's law|Applications|Divergence
+EMT,EMT04,Energy & potential (dipole energy density),10,12,Hayt Ch 4,Tutorial 4,yes,Work and potential|Potential gradient|Dipole|Energy density
+EMT,EMT05,Conductors dielectrics boundary conditions images,13,16,Hayt Ch 5,Tutorial 5 (2025 + solutions),yes,Current and continuity|Conductors|Dielectrics|Boundary conditions|Method of images
+EMT,EMT06,Capacitance Poisson's & Laplace's equations,17,21,"Hayt 6.1-6.4, 6.6-6.7",Tutorial 6 (2025 + solutions),no,Capacitance|Poisson's equation|Laplace's equation
+EMT,EMT07,Magnetostatics (Biot-Savart Ampere curl Stokes potentials),22,27,Hayt Ch 7,Tutorial 7 (2025 + solutions),no,Biot-Savart|Ampere's law|Curl and Stokes|Magnetic potentials
+EMT,EMT08,Magnetic forces materials boundary conditions,28,30,Hayt 8.1-8.7,Past papers (EMT PYQs),no,Forces|Torque|Magnetic materials|Boundary conditions
+EMT,EMT09,Faraday's law displacement current Maxwell's equations,31,33,Hayt 9.1-9.4,Past papers (EMT PYQs),no,Faraday's law|Displacement current|Maxwell's equations
+EMT,EMT10,Wave propagation Poynting skin effect polarization,34,39,Hayt Ch 11,Past papers (EMT PYQs),no,Plane waves|Poynting vector|Skin effect|Polarization
+EMT,EMT11,Reflection of plane waves & dispersion,40,42,Hayt Ch 12,Past papers (EMT PYQs),no,Normal incidence|Standing waves|Dispersion
+M3,M301,First-order equations (homogeneous exact integrating factors linear),1,3,Simmons sec 1-10,"Handout p67: 1, 3-6; p72, p80 all; p82: 1-4 + Worksheets 1-3",yes,Homogeneous|Exact|Integrating factors|Linear
+M3,M302,Second-order linear homogeneous equations,4,5,Simmons 14-15,Handout p112: 4-10; p117: 1-9 + Worksheet 4,yes,General solution|Wronskian
+M3,M303,Use of a known solution,6,6,Simmons 16,Handout p121 all + Worksheet 4,yes,
+M3,M304,Constant coefficients undetermined coefficients variation of parameters,7,11,Simmons 17-19,"Handout p125, p132, p135 all + Worksheet 5",yes,Constant coefficients|Undetermined coefficients|Variation of parameters
+M3,M305,Higher-order equations & operator methods,12,13,Simmons 22-23,Handout p161: 1-15; p169 all + Worksheet 5,yes,Higher-order equations|Operator methods
+M3,M306,Systems of first-order equations,14,16,Simmons 54-56,Handout p490: 1-2; p496: 5-9; p505: 1-5 + Worksheet 6,yes,Linear systems|Homogeneous systems|Constant coefficients
+M3,M307,Power series & series solutions (ordinary and regular singular points),17,21,Simmons 26-30,Handout p208: 1-2; p216: 1-7; p227: 1-5; p235: 1-5 + Worksheets 7-8,no,Power series|Ordinary points|Regular singular points
+M3,M308,Hypergeometric equation,22,23,Simmons 31,Handout p240 all + Worksheet 9,no,
+M3,M309,Legendre polynomials,24,26,Simmons 44-45,"Handout p398: 1-2, 4; p406: 1-5 + Worksheet 10",no,Legendre polynomials|Properties
+M3,M310,Bessel functions & gamma function,27,30,Simmons 46-47,Handout p416: 1-6; p425: 1-5 + Worksheet 11,no,Gamma function|Bessel functions|Properties
+M3,M311,Laplace transforms,31,34,Simmons 48-52,"Handout p451, p455 all; p462: 1-6; p467: 1-8; p474: 2-5",no,Transforms|Inverse transforms|Solving ODEs|Convolution
+M3,M312,Fourier series,35,38,Simmons 33-36,Handout p300: 1-6; p308: 1-5; p315 all; p321: 1-7,no,Fourier series|Even and odd functions|Convergence
+M3,M313,BVPs eigenvalues & PDEs (wave heat Laplace Sturm-Liouville),39,42,Simmons 40-43,Handout p308: 1,no,Eigenvalue problems|Sturm-Liouville|Wave equation|Heat equation|Laplace equation

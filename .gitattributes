@@ -1,0 +1,4 @@
+# Keep line endings right on both Windows and Mac
+* text=auto
+*.sh text eol=lf
+*.bat text eol=crlf

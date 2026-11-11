@@ -1,0 +1,27 @@
+A professor told students what an upcoming evaluation covers. Match it to the student's topic list.
+
+EVALUATION: {exam} on {exam_date}
+COURSE: {course}
+TODAY: {today}
+LECTURES TAUGHT: about {taught_now} so far; about {taught_then} by the evaluation day.
+EARLIER EVALUATIONS OF THIS COURSE: {earlier}
+
+THE SYLLABUS (as written by the professor):
+"""{text}"""
+
+THE COURSE'S TOPICS (id | topic | lectures | in the midsem syllabus? | parts):
+{topics}
+
+Return ONLY this JSON:
+{{
+  "topic_ids": ["ids from the list above that the syllabus covers"],
+  "sure": true | false,
+  "short": "the covered topics in a few plain words, e.g. 'Legendre, Bessel'"
+}}
+
+Rules:
+1. Use only ids from the list. Never invent ids.
+2. "Chapter"/"section" numbers: match them using the topics' names and reference columns.
+3. "Up to <date>" or "everything taught till now": use the lecture numbers above. Include a topic if any of its lectures are taught by then.
+4. "After Quiz 1" / "after the midsem": leave out topics covered before that point. Topics marked midsem = yes were in the midsem.
+5. "sure": false if the syllabus is vague, refers to things you can't place (e.g. "after Quiz 1" with no date for Quiz 1), or you had to guess where it starts or ends.

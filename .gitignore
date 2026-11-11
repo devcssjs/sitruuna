@@ -1,0 +1,27 @@
+# ---- Secrets: never commit these ----
+.env
+credentials.json
+client_secret*.json
+token_*.json
+
+# ---- Your personal copies (the *.example.* files are the shared versions) ----
+config.yaml
+data/timetable.csv
+data/topics.csv
+data/known_dates.csv
+
+# ---- Your data ----
+data/*.db
+data/*.db-*
+data/logs/
+data/check_20_results.txt
+
+# ---- Python / editors / OS ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

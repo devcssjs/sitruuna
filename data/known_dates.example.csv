@@ -1,0 +1,11 @@
+source,course,type,title,date,start,end,notes,confidence,syllabus
+told,M3,quiz,M3 Quiz 2,2026-11-13,19:00,20:00,,high,
+told,EM,quiz,EM Quiz 2,2026-11-16,,,moved from 2 Nov (handout),high,
+told,ED,quiz,ED Quiz 3,2026-11-19,,,best 2 of 3 quizzes count,high,
+handout,DD,lab,DD Verilog evaluation (tentative),2026-11-14,16:00,,"8% · date from handout, may change",low,DD06|DD12
+handout,DD,lab,DD Project demo (P3),2026-11-20,11:00,13:00,,high,
+handout,M3,compre,M3 Compre,2026-12-02,,,FN (morning) · 40%,high,
+handout,DD,compre,DD Compre,2026-12-05,,,FN (morning) · 35%,high,
+handout,EMT,compre,EMT Compre,2026-12-08,,,AN (afternoon) · 40%,high,
+handout,EM,compre,EM Compre,2026-12-10,,,FN (morning) · 35%,high,
+handout,ED,compre,ED Compre,2026-12-14,,,FN (morning) · 40% · open book,high,
